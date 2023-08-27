@@ -227,10 +227,11 @@ class _FinishSignupState extends State<FinishSignup> {
         },
         style: ElevatedButton.styleFrom(
           shape: const StadiumBorder(),
-          padding: const EdgeInsets.symmetric(vertical: 16),
+          fixedSize: const Size(double.infinity, 55),
         ),
         child: isButtonDisabled
             ? const CircularProgressIndicator( // Display loading animation
+          strokeWidth: 2,
           valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
         )
             : Text(

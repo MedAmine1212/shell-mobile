@@ -104,13 +104,18 @@ class _ForgotPasswordScreenState extends State<ForgotPasswordScreen> {
                             );
                           }
                         },
-                        child: isButtonDisabled
+                        style: ElevatedButton.styleFrom(
+                          shape: const StadiumBorder(),
+                          fixedSize: const Size(220, 55),
+                        ),
+                        child:  isButtonDisabled
                             ? const CircularProgressIndicator( // Display loading animation
+                          strokeWidth: 2,
                           valueColor: AlwaysStoppedAnimation<Color>(Colors.black),
                         )
                             : const Text(
                           "Send new password",
-                          style: TextStyle(fontSize: 24, color: Colors.black),
+                          style: TextStyle(fontSize: 18, color: Colors.black),
                         ),
                       ),
                       _cancelReset(context),
